@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Mail, Hearts } from "lucide-react";
+import { Mail, Heart } from "lucide-react";
 
 export const EnvelopeIntro = () => {
   return (
@@ -26,7 +26,7 @@ export const EnvelopeIntro = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Hearts className="w-8 h-8 mx-auto text-wedding-rose-gold mb-4" />
+            <Heart className="w-8 h-8 mx-auto text-wedding-rose-gold mb-4" />
             <p className="text-lg text-wedding-brown italic">
               With joy in our hearts,
             </p>
