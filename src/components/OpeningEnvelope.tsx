@@ -11,7 +11,7 @@ export const OpeningEnvelope = () => {
       setIsOpened(true);
       setTimeout(() => {
         setIsComplete(true);
-      }, 2000); // Increased duration for smoother transition
+      }, 2000);
     }
   };
 
@@ -27,10 +27,10 @@ export const OpeningEnvelope = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="relative w-[90vw] max-w-2xl cursor-pointer"
+            className="relative w-screen h-screen cursor-pointer"
             onClick={handleEnvelopeClick}
           >
-            {/* Envelope Flap */}
+            {/* Envelope Flap with Shadow */}
             <motion.div
               initial={{ rotateX: 0 }}
               animate={{ rotateX: isOpened ? 180 : 0 }}
@@ -44,8 +44,17 @@ export const OpeningEnvelope = () => {
                 perspective: "1000px",
                 zIndex: 2,
               }}
-              className="absolute top-0 left-0 right-0 h-40 bg-white shadow-lg"
+              className="absolute top-0 left-0 right-0 h-[40%]"
             >
+              {/* Triangle Shadow */}
+              <div 
+                className="absolute inset-0 z-10"
+                style={{
+                  clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
+                  background: "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%)",
+                }}
+              />
+              {/* Flap Background */}
               <div 
                 className="absolute inset-0"
                 style={{
@@ -68,7 +77,7 @@ export const OpeningEnvelope = () => {
                 ease: [0.4, 0, 0.2, 1],
                 delay: 0.4
               }}
-              className="relative z-10 bg-white p-12 shadow-xl min-h-[400px] flex items-center justify-center"
+              className="absolute inset-0 m-auto h-[80%] z-10 bg-white p-12 shadow-xl flex items-center justify-center"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +114,7 @@ export const OpeningEnvelope = () => {
 
             {/* Envelope Bottom */}
             <div 
-              className="absolute bottom-0 left-0 right-0 h-20 bg-white shadow-md -z-20"
+              className="absolute bottom-0 left-0 right-0 h-[20%] bg-white shadow-md -z-20"
               style={{
                 clipPath: "polygon(0 0, 50% 100%, 100% 0)",
               }}
