@@ -7,10 +7,12 @@ import { RsvpForm } from "@/components/RsvpForm";
 import { GiftSection } from "@/components/GiftSection";
 import { DressCode } from "@/components/DressCode";
 import { Accommodations } from "@/components/Accommodations";
+import { OpeningEnvelope } from "@/components/OpeningEnvelope";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-wedding-cream">
+      <OpeningEnvelope />
       <WelcomeScreen />
       <EnvelopeIntro />
       <CountdownTimer />
