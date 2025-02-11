@@ -46,23 +46,25 @@ export const OpeningEnvelope = () => {
               }}
               className="absolute top-0 left-0 right-0 h-[40%]"
             >
-              {/* Triangle Shadow */}
-              <div 
-                className="absolute inset-0 z-10"
-                style={{
-                  clipPath: "polygon(50% 100%, 0 0, 100% 0)",
-                  background: "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%)",
-                }}
-              />
-              {/* Flap Background */}
-              <div 
-                className="absolute inset-0"
-                style={{
-                  clipPath: "polygon(50% 100%, 0 0, 100% 0)",
-                  background: "linear-gradient(45deg, #F5E6D3 25%, transparent 25%), linear-gradient(-45deg, #F5E6D3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #F5E6D3 75%), linear-gradient(-45deg, transparent 75%, #F5E6D3 75%)",
-                  backgroundSize: "20px 20px",
-                }}
-              />
+              <div className="absolute inset-0 bg-white">
+                {/* Triangle Shadow */}
+                <div 
+                  className="absolute inset-0 z-10"
+                  style={{
+                    clipPath: "polygon(50% 100%, 0 0, 100% 0)",
+                    background: "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%)",
+                  }}
+                />
+                {/* Flap Background */}
+                <div 
+                  className="absolute inset-0"
+                  style={{
+                    clipPath: "polygon(50% 100%, 0 0, 100% 0)",
+                    background: "linear-gradient(45deg, #F5E6D3 25%, transparent 25%), linear-gradient(-45deg, #F5E6D3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #F5E6D3 75%), linear-gradient(-45deg, transparent 75%, #F5E6D3 75%)",
+                    backgroundSize: "20px 20px",
+                  }}
+                />
+              </div>
             </motion.div>
 
             {/* Letter Content */}
@@ -90,13 +92,16 @@ export const OpeningEnvelope = () => {
                   delay: 0.8,
                   ease: "easeOut"
                 }}
-                className="text-center"
+                className="text-center space-y-4"
               >
-                <h1 className="text-4xl md:text-5xl font-serif text-wedding-brown mb-6">
-                  You're Invited
+                <h3 className="text-wedding-rose-gold text-xl font-light tracking-widest">
+                  WE ARE GETTING MARRIED
+                </h3>
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-wedding-brown">
+                  Rony & Delmy
                 </h1>
-                <p className="text-xl text-wedding-brown italic">
-                  Click to open our wedding invitation
+                <p className="text-2xl text-wedding-brown font-light tracking-wide">
+                  December 27th, 2024
                 </p>
               </motion.div>
             </motion.div>
