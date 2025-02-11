@@ -50,7 +50,7 @@ export const OpeningEnvelope = () => {
               <div 
                 className="absolute inset-0 z-10"
                 style={{
-                  clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
+                  clipPath: "polygon(50% 100%, 0 0, 100% 0)",
                   background: "linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%)",
                 }}
               />
@@ -58,7 +58,7 @@ export const OpeningEnvelope = () => {
               <div 
                 className="absolute inset-0"
                 style={{
-                  clipPath: "polygon(0 100%, 50% 0, 100% 100%)",
+                  clipPath: "polygon(50% 100%, 0 0, 100% 0)",
                   background: "linear-gradient(45deg, #F5E6D3 25%, transparent 25%), linear-gradient(-45deg, #F5E6D3 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #F5E6D3 75%), linear-gradient(-45deg, transparent 75%, #F5E6D3 75%)",
                   backgroundSize: "20px 20px",
                 }}
